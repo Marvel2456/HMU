@@ -11,6 +11,16 @@ from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
 
+class RegistrationView(generics.CreateAPIView):
+    serializer_class = RegisterSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        response_data = serializer.create(validated_data=serializer.validated_data)
+
+        return Response(response_data, status=status.HTTP_201_CREATED)
 
 
 class LoginAPIView(generics.GenericAPIView):
