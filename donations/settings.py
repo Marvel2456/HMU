@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9in31%pbx0ii51wcy@$$#oh@e##fp#)x2b$!(bs2_5+cod$n&7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -60,9 +60,10 @@ ROOT_URLCONF = 'donations.urls'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
-AUTHENTICATION_BACKENDS = (
+AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-)
+     
+]
 
 REST_FRAMEWORK = {
 
