@@ -18,6 +18,8 @@ class Donation(models.Model):
     phone_number = models.CharField(max_length=100, blank=True, null=True)
     timestamp = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     is_announced = models.BooleanField(default=False, blank=True, null=True)
+    as_anonymous = models.BooleanField(default=False, blank=True, null=True)
+
 
     def __str__(self):
         return f"{self.full_name} --- {self.amount} --- {self.timestamp} --- {self.is_announced }"
