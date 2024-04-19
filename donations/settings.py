@@ -198,6 +198,6 @@ STATIC_ROOT = BASE_DIR / 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
+# first switch terminal to cmd, then type: env\scripts\activate to activate virtual enviroment
 
 # To run the server use python manage.py runserver
