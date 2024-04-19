@@ -13,7 +13,7 @@ class DonationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Donation
-        fields = ['full_name', 'amount', 'method', 'phone_number', 'is_announced', 'as_anonymous']
+        fields = ['id', 'full_name', 'amount', 'method', 'phone_number', 'is_announced', 'as_anonymous']
 
 class DonationUpdateSerializer(serializers.ModelSerializer):
     is_announced = serializers.BooleanField(required=False)
